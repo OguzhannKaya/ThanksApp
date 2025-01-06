@@ -11,8 +11,9 @@ namespace BLL.Models
         public string Password => Record.Password;
         [DisplayName("Birth Date")]
         public string BirthDate => Record.BirthDate.HasValue ? Record.BirthDate.Value.ToString("MM/dd/yyyy") : string.Empty;
-        [DisplayName("Is Male?")]
+        [DisplayName("Is Active")]
         public string IsActive => Record.IsActive ? "Active" : "Not Active";
+        [DisplayName("Is Male")]
         public string Gender => Record.Gender ? "Male" : "Female";
         public string Role => Record.Role?.Name;
     }
